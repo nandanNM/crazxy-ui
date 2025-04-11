@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "crazxy-button",
+  "type": "registry:component",
+  "title": "Crazxy Button",
+  "description": "A simple crazxy button component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/crazxy/button.tsx",
+      "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\ninterface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {\r\n  className?: string;\r\n  children: React.ReactNode;\r\n  glowClassName?: string;\r\n  aurora?: boolean;\r\n}\r\n\r\nexport function Button({\r\n  className,\r\n  children,\r\n  glowClassName,\r\n  aurora,\r\n  ...props\r\n}: ButtonProps) {\r\n  return (\r\n    <div className=\"relative\">\r\n      {/* Gradient border container */}\r\n      {aurora && (\r\n        <div\r\n          className={cn(\r\n            \"absolute -inset-[2px] rounded-lg bg-gradient-to-r from-purple-500 via-cyan-300 to-emerald-400 opacity-75 blur-lg transition-all\",\r\n            \"group-hover:opacity-100 group-hover:blur-xl\",\r\n            glowClassName\r\n          )}\r\n        />\r\n      )}\r\n\r\n      {/* Button */}\r\n      <button\r\n        className={cn(\r\n          \"relative rounded-lg bg-slate-950/90 cursor-pointer px-4 py-2\",\r\n          \"text-slate-100 shadow-xl\",\r\n          \"transition-all hover:bg-slate-950/70\",\r\n          \"group border border-slate-800\",\r\n          className\r\n        )}\r\n        {...props}>\r\n        {children}\r\n      </button>\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "components/ui/crazxy/button.tsx"
+    }
+  ]
+}

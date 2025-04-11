@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "crazxy",
+  "homepage": "https://crazxycn.com",
+  "items": [
+    {
+      "name": "crazxy-button",
+      "type": "registry:component",
+      "title": "Crazxy Button",
+      "description": "A simple crazxy button component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/crazxy/button.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy/button.tsx"
+        }
+      ]
+    }
+  ]
+}
