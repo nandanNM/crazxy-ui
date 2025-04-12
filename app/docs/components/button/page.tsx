@@ -2,7 +2,7 @@ import CopyCommandButton from "../copy-command-button";
 import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
 import CodeSnippet from "../code-snippet";
-import { Button as CrazxyButton } from "@/components/crazxy/button/button";
+import { AuroraButton } from "@/components/crazxy/button/aurora-button";
 
 export default function ButtonPage() {
   return (
@@ -29,7 +29,7 @@ export default function ButtonPage() {
         </div>
         <div className="flex items-center justify-center min-h-[400px] relative">
           <div className="w-full flex items-center justify-center flex-col gap-8">
-            <CrazxyButton aurora={true}>Click me</CrazxyButton>
+            <AuroraButton aurora={true}>Click me</AuroraButton>
           </div>
         </div>
       </div>
