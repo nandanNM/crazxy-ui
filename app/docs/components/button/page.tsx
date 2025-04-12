@@ -2,7 +2,7 @@ import CopyCommandButton from "../copy-command-button";
 import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
 import CodeSnippet from "../code-snippet";
-import { Button } from "@/components/ui/crazxy/button";
+import { Button as CrazxyButton } from "@/components/ui/crazxy/button";
 
 export default function ButtonPage() {
   return (
@@ -10,8 +10,8 @@ export default function ButtonPage() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-2">
         <h1 className="text-3xl font-bold">Button</h1>
         <CopyCommandButton
-          copyCommand={`pnpm dlx shadcn@canary add ${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-button.json`}
-          command={"pnpm dlx shadcn@canary add crazxy-button"}
+          copyCommand={`pnpm dlx shadcn@latest add ${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-button.json`}
+          command={"pnpm dlx shadcn@latest add crazxy-button"}
         />
       </div>
 
@@ -29,7 +29,7 @@ export default function ButtonPage() {
         </div>
         <div className="flex items-center justify-center min-h-[400px] relative">
           <div className="w-full flex items-center justify-center flex-col gap-8">
-            <Button aurora={true}>Click me</Button>
+            <CrazxyButton aurora={true}>Click me</CrazxyButton>
           </div>
         </div>
       </div>

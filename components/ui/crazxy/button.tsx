@@ -33,7 +33,7 @@ export function Button({
       {/* Button */}
       <button
         className={cn(
-          "relative rounded-lg bg-slate-950/90 cursor-pointer px-4 py-2",
+          "relative rounded-lg flex items-center justify-center bg-slate-950/90 cursor-pointer px-4 py-2",
           "text-slate-100 shadow-xl",
           "transition-all hover:bg-slate-950/70",
           "group border border-slate-800",

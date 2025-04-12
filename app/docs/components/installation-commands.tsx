@@ -38,7 +38,7 @@ export default function InstallationCommands({
               <TabsTrigger
                 value="pnpm"
                 onClick={() =>
-                  setCommand(`pnpm dlx shadcn@canary add ${packageUrl}`)
+                  setCommand(`pnpm dlx shadcn@latest add ${packageUrl}`)
                 }
                 className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-x-2 data-[state=active]:border-b-white data-[state=active]:shadow-none rounded-none px-2 text-white data-[state=inactive]:text-zinc-500">
                 pnpm
@@ -84,7 +84,7 @@ export default function InstallationCommands({
 
           <TabsContent value="pnpm" className="p-4 pt-2">
             <div className="font-mono text-sm">
-              pnpm dlx shadcn@canary add {packageUrl}
+              pnpm dlx shadcn@latest add {packageUrl}
             </div>
           </TabsContent>
 
