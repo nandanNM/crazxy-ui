@@ -60,11 +60,8 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
-              Managing a small business today is already tough. Avoid further
-              complications by ditching outdated, tedious trade methods. Our
-              goal is to streamline SMB trade, making it easier and faster than
-              ever.
+            <p className="text-sm md:text-xl leading-relaxed tracking-tighter md:tracking-tight text-muted-foreground max-w-2xl text-center">
+              Not just another component library, but a bold step beyond, empowering developers to build faster, smarter, and crazier than ever.
             </p>
           </div>
           <div className="flex flex-row gap-3">
