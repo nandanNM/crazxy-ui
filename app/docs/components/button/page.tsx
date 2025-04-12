@@ -3,14 +3,6 @@ import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
 import CodeSnippet from "../code-snippet";
 import { Button as CrazxyButton } from "@/components/crazxy/button/button";
-// import { Carousel as CrazyCarousel } from "@/components/crazxy/carousel";
-// import Image from "next/image";
-
-// const images = [
-//   "/carousel/image1.jpg",
-//   "/carousel/image2.png",
-//   "/carousel/image3.png",
-// ];
 
 export default function ButtonPage() {
   return (
@@ -37,7 +29,7 @@ export default function ButtonPage() {
         </div>
         <div className="flex items-center justify-center min-h-[400px] relative">
           <div className="w-full flex items-center justify-center flex-col gap-8">
-            <CrazxyButton aurora={true}>Click me</CrazxyButton>
+            <AuroraButton aurora={true}>Click me</AuroraButton>
           </div>
         </div>
       </div>
