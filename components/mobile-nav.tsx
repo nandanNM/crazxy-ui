@@ -15,7 +15,7 @@ import {
   DrawerTitle,
 } from "./ui/drawer";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
+import { Badge } from "@/components/crazxy/badge";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -30,26 +30,28 @@ export default function MobileNav() {
       <DrawerContent className="h-3/4">
         <DrawerHeader>
           <div className="flex flex-col gap-2">
-            {navItems.header.map((item) => (
+            {navItems.header.map(item => (
               <Link
                 href={item.href}
                 key={item.href}
                 className="text-2xl font-extralight"
-                onClick={() => setOpen(false)}>
+                onClick={() => setOpen(false)}
+              >
                 {item.label}
               </Link>
             ))}
           </div>
 
-          {navItems.navMain.map((navItem) => (
+          {navItems.navMain.map(navItem => (
             <div key={navItem.title} className="flex flex-col gap-2 pt-4">
               <DrawerTitle className="text-xl">{navItem.title}</DrawerTitle>
-              {navItem.items.map((item) => (
+              {navItem.items.map(item => (
                 <Link
                   href={item.url}
                   key={item.title}
                   className="text-xl font-extralight text-muted-foreground flex items-center gap-5"
-                  onClick={() => setOpen(false)}>
+                  onClick={() => setOpen(false)}
+                >
                   {item.title}
                   {item.new && <Badge>New</Badge>}
                 </Link>
