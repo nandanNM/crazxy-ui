@@ -3,6 +3,14 @@ import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
 import CodeSnippet from "../code-snippet";
 import { Button as CrazxyButton } from "@/components/crazxy/button/button";
+// import { Carousel as CrazyCarousel } from "@/components/crazxy/carousel";
+// import Image from "next/image";
+
+// const images = [
+//   "/carousel/image1.jpg",
+//   "/carousel/image2.png",
+//   "/carousel/image3.png",
+// ];
 
 export default function ButtonPage() {
   return (
