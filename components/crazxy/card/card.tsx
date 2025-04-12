@@ -1,18 +1,34 @@
-import React from 'react'
+import type React from "react"
+import Image from "next/image"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-const Card = (props) => {
-    const {title,subtitle,description,imageUrl} = props
+interface CardProps {
+  title: string
+  subtitle?: string
+  description?: string
+  imageUrl?: string
+  className?: string
+}
+
+const UICard: React.FC<CardProps> = ({ title, subtitle, description, imageUrl, className = "" }) => {
   return (
-    <div className='m-40 w-1/2 shadow-2xl rounded-2xl'>
-      <div className='p-6'>
-      {imageUrl && <img  className="w-fit object-fill rounded-2xl"src={imageUrl}/>
-         }
-        <h1 className='p-2 text-2xl'>{title}</h1>
-        <h2 className='px-2'>{subtitle}</h2>
-        <p className='pt-1 px-2'>{description}</p>
-      </div>
-    </div>
+    <Card className={`overflow-hidden ${className}`}>
+      {imageUrl && (
+        <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72">
+          <Image src={imageUrl || "/placeholder.svg"} alt={title} fill className="object-cover rounded-t-lg" />
+        </div>
+      )}
+      <CardHeader>
+        <CardTitle className="text-xl sm:text-2xl">{title}</CardTitle>
+        {subtitle && <p className="text-sm sm:text-base text-muted-foreground">{subtitle}</p>}
+      </CardHeader>
+      {description && (
+        <CardContent>
+          <p className="text-sm sm:text-base">{description}</p>
+        </CardContent>
+      )}
+    </Card>
   )
 }
 
-export default Card
+export default UICard
