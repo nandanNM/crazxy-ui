@@ -8,23 +8,24 @@ import { GitHubStarButton } from "@/components/crazxy/button/gitHubStar-button";
 
 export function SiteHeader() {
   return (
-    <header className="flex sticky top-0 z-50 h-14 shrink-0 items-center gap-2 border-b border-dashed bg-background/95">
-      <div className="flex w-full items-center h-full gap-1 px-4 md:gap-5 md:px-6 max-w-[1400px] mx-auto border-dashed border-l border-r">
-        <Link href="/" className="hidden md:flex items-center gap-2">
+    <header className="bg-background/95 sticky top-0 z-50 flex h-14 shrink-0 items-center gap-2 border-b border-dashed">
+      <div className="mx-auto flex h-full w-full max-w-[1400px] items-center gap-1 border-r border-l border-dashed px-4 md:gap-5 md:px-6">
+        <Link href="/" className="hidden items-center gap-2 md:flex">
           {/* image */}
-          <h2 className={` hidden font-bold md:inline-block`}>crazxyUI</h2>
+          <h2 className={`hidden font-bold md:inline-block`}>CrazxyUI</h2>
         </Link>
 
         <div className="block md:hidden">
           <MobileNav />
         </div>
 
-        <nav className="hidden md:flex items-center gap-4 text-sm">
+        <nav className="hidden items-center gap-4 text-sm md:flex">
           {navItems.header.map((item) => (
             <Link
               href={item.href}
               key={item.href}
-              className="transition-colors hover:text-foreground/80 text-foreground">
+              className="hover:text-foreground/80 text-foreground transition-colors"
+            >
               {item.label}
             </Link>
           ))}

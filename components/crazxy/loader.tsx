@@ -11,7 +11,7 @@ const loaderVariants = cva(
     variants: {
       variant: {
         default: "border-t-primary",
-        secondary: "border-t-secondary",
+        secondary: "border-t-blue-400 text-blue-400",
         destructive: "border-t-destructive",
         outline: "border-t-muted-foreground",
         ghost: "border-t-muted",
@@ -84,9 +84,9 @@ const Loader = React.forwardRef<HTMLDivElement, LoaderProps>(
   ) => {
     // Custom animation speeds
     const animationDuration = {
-      slow: "2s",
-      normal: "1s",
-      fast: "0.5s",
+      slow: "2.5s",
+      normal: "1.5s",
+      fast: "1s",
     };
 
     // Custom style with color if provided

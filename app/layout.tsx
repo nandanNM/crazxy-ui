@@ -10,6 +10,7 @@ import { Toaster } from "sonner";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
 });
 
 const fontHeading = FontHeading({
@@ -25,8 +26,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Build your retro library - ",
-  description: "A collection of 8-bit styled components for your next project.",
+  title: "Build your retro library - CrazxyUI ",
+  description:
+    "A collection of CrazxyUI styled components for your next project.",
 };
 
 export default function RootLayout({
@@ -37,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontHeading.variable} antialiased flex flex-col min-h-screen`}>
+        className={`${fontSans.className} ${fontHeading.className} antialiased flex flex-col min-h-screen`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

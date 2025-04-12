@@ -17,7 +17,7 @@ export const navItems = {
         {
           title: "Button",
           url: "/docs/components/button",
-          new: false,
+          new: true,
         },
       ],
     },
