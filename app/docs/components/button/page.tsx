@@ -2,7 +2,7 @@ import CopyCommandButton from "../copy-command-button";
 import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
 import CodeSnippet from "../code-snippet";
-import { Button as CrazxyButton } from "@/components/crazxy/button/button";
+import { AuroraButton } from "@/components/crazxy/button/aurora-button";
 
 export default function ButtonPage() {
   return (
