@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
-import { Button as CrazxyButton } from "@/components/ui/crazxy/button";
+import { Button as CrazxyButton } from "@/components/crazxy/button/button";
 import { Button } from "@/components/ui/button";
 
 function Hero() {

@@ -4,17 +4,15 @@ import { navItems } from "@/config/nav-items";
 
 import { ModeSwitcher } from "@/components/mode-switcher";
 import MobileNav from "./mobile-nav";
-import { GitHubStarButton } from "./ui/crazxy/gitHubStar-button";
+import { GitHubStarButton } from "@/components/crazxy/button/gitHubStar-button";
 
 export function SiteHeader() {
   return (
     <header className="flex sticky top-0 z-50 h-14 shrink-0 items-center gap-2 border-b border-dashed bg-background/95">
       <div className="flex w-full items-center h-full gap-1 px-4 md:gap-5 md:px-6 max-w-[1400px] mx-auto border-dashed border-l border-r">
         <Link href="/" className="hidden md:flex items-center gap-2">
-          {/* <Image src="/8bitcn.png" alt="logo" width={32} height={32} />{" "} */}
-          <h2 className={` hidden font-bold md:inline-block text-xs`}>
-            crazxyUI
-          </h2>
+          {/* image */}
+          <h2 className={` hidden font-bold md:inline-block`}>crazxyUI</h2>
         </Link>
 
         <div className="block md:hidden">
