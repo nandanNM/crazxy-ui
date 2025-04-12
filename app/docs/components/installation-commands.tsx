@@ -6,6 +6,8 @@ import { toast } from "sonner";
 import { Tabs, TabsContent, TabsTrigger, TabsList } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { SiBun, SiPnpm } from "react-icons/si";
+import { FaYarn, FaNpm } from "react-icons/fa";
 
 interface InstallationCommandsProps {
   packageUrl: string;
@@ -15,7 +17,7 @@ export default function InstallationCommands({
   packageUrl,
 }: InstallationCommandsProps) {
   const [command, setCommand] = useState(
-    `pnpm dlx shadcn@latest add ${packageUrl}`
+    `pnpm dlx shadcn@latest add ${packageUrl}`,
   );
   const [copied, setCopied] = useState(false);
 
@@ -34,13 +36,15 @@ export default function InstallationCommands({
       <div className="bg-[#121212] text-white">
         <Tabs defaultValue="pnpm">
           <TabsList className="bg-[#121212] border-b border-zinc-800 rounded-none h-12 px-2 w-full justify-between">
-            <div>
+            <div className="flex items-center space-x-2">
               <TabsTrigger
                 value="pnpm"
                 onClick={() =>
                   setCommand(`pnpm dlx shadcn@latest add ${packageUrl}`)
                 }
-                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-x-2 data-[state=active]:border-b-white data-[state=active]:shadow-none rounded-none px-2 text-white data-[state=inactive]:text-zinc-500">
+                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-x-2 data-[state=active]:border-white data-[state=active]:shadow-none rounded-lg px-2 text-white data-[state=inactive]:text-zinc-500 flex items-center gap-1 cursor-pointer"
+              >
+                <SiPnpm className="size-3" />
                 pnpm
               </TabsTrigger>
               <TabsTrigger
@@ -48,7 +52,9 @@ export default function InstallationCommands({
                 onClick={() =>
                   setCommand(`npx shadcn@latest add ${packageUrl}`)
                 }
-                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-b-white data-[state=active]:shadow-none rounded-none px-2 text-white data-[state=inactive]:text-zinc-500">
+                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-white data-[state=active]:shadow-none rounded-lg px-2 text-white data-[state=inactive]:text-zinc-500 flex items-center gap-1 cursor-pointer"
+              >
+                <FaNpm className="size-3" />
                 npm
               </TabsTrigger>
               <TabsTrigger
@@ -56,7 +62,9 @@ export default function InstallationCommands({
                 onClick={() =>
                   setCommand(`yarn dlx shadcn@latest add ${packageUrl}`)
                 }
-                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-b-white data-[state=active]:shadow-none rounded-none px-2 text-white data-[state=inactive]:text-zinc-500">
+                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-white data-[state=active]:shadow-none rounded-lg px-2 text-white data-[state=inactive]:text-zinc-500 flex items-center gap-1 cursor-pointer"
+              >
+                <FaYarn className="size-3" />
                 yarn
               </TabsTrigger>
               <TabsTrigger
@@ -64,7 +72,9 @@ export default function InstallationCommands({
                 onClick={() =>
                   setCommand(`bunx --bun shadcn@latest add ${packageUrl}`)
                 }
-                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-b-white data-[state=active]:shadow-none rounded-none px-2 text-white data-[state=inactive]:text-zinc-500">
+                className="data-[state=active]:bg-transparent data-[state=active]:border-b-2 data-[state=active]:border-white data-[state=active]:shadow-none rounded-lg px-2 text-white data-[state=inactive]:text-zinc-500 flex items-center gap-1 cursor-pointer"
+              >
+                <SiBun className="size-3" />
                 bun
               </TabsTrigger>
             </div>
@@ -73,7 +83,8 @@ export default function InstallationCommands({
               variant="ghost"
               size="icon"
               className="text-white hover:bg-zinc-800 rounded-md hover:text-white"
-              onClick={handleCopy}>
+              onClick={handleCopy}
+            >
               {copied ? (
                 <Check className="size-3" />
               ) : (
