@@ -6,17 +6,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "rounded-lg px-2 inline-flex items-center py-0.5 text-[9px] ring-1 tracking-wide font-medium uppercase bg-linear-to-r shadow-[0_0_10px_-3px_rgba(16,185,129,0.15)] dark:shadow-[0_0_10px_-3px_rgba(16,185,129,0.2)]",
+  "rounded-lg px-2 inline-flex items-center py-0.5 text-[9px] tracking-wide w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden font-medium bg-linear-to-r shadow-[0_0_10px_-3px_rgba(16,185,129,0.15)] dark:shadow-[0_0_10px_-3px_rgba(16,185,129,0.2)]",
   {
     variants: {
       variant: {
         default:
           "from-emerald-400/5 via-emerald-500/5 to-teal-500/5 text-emerald-600 dark:text-emerald-400 ring-1 ring-emerald-500/20 dark:ring-emerald-400/20",
         secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "text-transparent ring-1 ring-orange-500/20 dark:ring-orange-400/20 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text font-semibold ",
         destructive:
-          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground",
+          "from-purple-400/5 via-purple-500/5 to-purple-500/5 text-purple-600 dark:text-purple-400 ring-1 ring-purple-500/20 dark:ring-purple-400/20",
+        outline:
+          "from-emerald-400/5 via-emerald-500/5 to-teal-500/5 ring-1 ring-emerald-500/20 dark:ring-emerald-400/20 text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
         ghost:
           "border-transparent bg-transparent text-foreground hover:bg-muted/20",
         purple:
@@ -50,7 +51,7 @@ function Badge({
   asChild = false,
   ...props
 }: BadgeProps) {
-  const Comp = asChild ? React.Fragment : "div";
+  const Comp = asChild ? React.Fragment : "span";
   return (
     <Comp
       className={cn(badgeVariants({ variant, size }), className)}
