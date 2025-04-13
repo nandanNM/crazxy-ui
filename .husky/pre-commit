@@ -1,12 +1,1 @@
-echo ' Preparing orc axes for the mighty project conquest! 🧐'
-echo 'Get ready for battle, this may take a while...'
 
-# Check Orcish Code Standards
-pnpm lint ||
-(
-    echo ` 😡🤖 Grargh, you've encountered an issue in your code. Check the orcish runes! 😡🤖
-          Run pnpm lint, make changes, and try the conquest again.`;
-    false;
-)
-
-echo '🎉 No problems found: initiating orcish conquest now.... ✨🚀🏹🛡️'
