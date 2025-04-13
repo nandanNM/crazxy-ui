@@ -16,12 +16,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarContent className="bg-background px-4">
-        {navItems.navMain.map((nav) => (
+        {navItems.navMain.map(nav => (
           <SidebarGroup key={nav.title}>
             <SidebarGroupLabel>{nav.title}</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {nav.items.map((item) => (
+                {nav.items.map(item => (
                   <SidebarItem key={item.title} item={item} />
                 ))}
               </SidebarMenu>
