@@ -1,13 +1,16 @@
-import { Skeleton } from "@/components/ui/skeleton"
+import { cn } from "@/lib/utils";
 
-export function DefaultSkeleton() {
+interface DefaultSkeletonProps {
+  className?: string;
+}
+export function DefaultSkeleton({ className }: DefaultSkeletonProps) {
   return (
-    <div className="max-w-full space-y-2">
-      <Skeleton className="h-3 w-56 rounded-full" />
-      <Skeleton className="h-2 w-72 rounded-full" />
-      <Skeleton className="h-2 w-72 rounded-full" />
-      <Skeleton className="h-2 w-72 rounded-full" />
-      <Skeleton className="h-2 w-72 rounded-full" />
+    <div className={cn("flex flex-col gap-2", className)}>
+      <div className="h-3 w-56 rounded-full animate-pulse bg-muted" />
+      <div className="h-2 w-72 rounded-full animate-pulse bg-muted" />
+      <div className="h-2 w-72 rounded-full animate-pulse bg-muted" />
+      <div className="h-2 w-72 rounded-full animate-pulse bg-muted" />
+      <div className="h-2 w-72 rounded-full animate-pulse bg-muted" />
     </div>
-  )
+  );
 }

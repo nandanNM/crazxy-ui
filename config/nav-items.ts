@@ -8,6 +8,10 @@ export const navItems = {
       label: "Components",
       href: "/docs/components/button",
     },
+    {
+      label: "Blockes",
+      href: "/docs/blockes/footer",
+    },
   ],
   navMain: [
     {
@@ -24,6 +28,11 @@ export const navItems = {
         { title: "Badge", url: "/docs/components/badge", new: false },
         { title: "Loader", url: "/docs/components/loader", new: true },
       ],
+    },
+    {
+      title: "Blockes",
+      url: "blockes/footer",
+      items: [{ title: "Footer", url: "/docs/blockes/footer", new: true }],
     },
   ],
 };

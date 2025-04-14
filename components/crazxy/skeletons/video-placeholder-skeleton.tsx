@@ -1,9 +1,19 @@
-import { Video } from "lucide-react"
-
-export function VideoPlaceholderSkeleton() {
+import { cn } from "@/lib/utils";
+import { Video } from "lucide-react";
+interface VideoPlaceholderSkeletonProps {
+  className?: string;
+}
+export function VideoPlaceholderSkeleton({
+  className,
+}: VideoPlaceholderSkeletonProps) {
   return (
-    <div className="grid h-full min-h-[160px] max-h-[300px] w-full max-w-xs place-items-center rounded-lg bg-muted">
+    <div
+      className={cn(
+        "flex flex-col items-center justify-center gap-4 rounded-lg border p-4",
+        className,
+      )}
+    >
       <Video className="h-12 w-12 text-muted-foreground" />
     </div>
-  )
+  );
 }

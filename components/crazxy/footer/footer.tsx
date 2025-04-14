@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Twitter, Youtube, Dribbble } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Input } from "../input/input";
 
 export function Footer() {
   const socialLinks = [
@@ -44,7 +44,7 @@ export function Footer() {
                 height={64}
                 className="w-16 h-auto "
               />
-              <span className="text-3xl font-bold pl-2">Company Name</span>
+              <span className="text-3xl font-bold pl-2">Crazxy UI</span>
             </div>
             <div className="text-foreground/60 space-y-1">
               <p>Copyright 2025 Nexcent ltd.</p>

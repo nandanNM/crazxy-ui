@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import CodeSnippet from "../code-snippet";
 import { Button } from "@/components/crazxy/button/button";
 import ComponentShowcase from "@/components/component-showcase";
+import { OpenInV0Button } from "../open-in-v0-button";
 
 export default function ButtonPage() {
   const variants = [
@@ -54,10 +55,14 @@ export default function ButtonPage() {
           command={"pnpm dlx shadcn@latest add crazxy-button"}
         />
       </div>
+
       <p className="text-muted-foreground">
         Displays a button or a component that looks like a crazxy button.
       </p>
-      {/* vutton */}
+      {/* v0 Btton */}
+      <div className="justify-end flex ">
+        <OpenInV0Button name="crazxy-button" />
+      </div>
 
       <ComponentShowcase
         variants={variants}
