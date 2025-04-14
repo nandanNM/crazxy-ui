@@ -43,9 +43,9 @@ export default function ComponentShowcase({
         <Tabs
           value={activeTab}
           onValueChange={setActiveTab}
-          className="w-full sm:w-auto"
+          className="w-full sm:w-auto "
         >
-          <TabsList className="border rounded-xl p-1 w-full justify-between">
+          <TabsList className="border rounded-xl flex flex-wrap flex-col p-1 w-full overflow-x-auto scrollb justify-between scrollbar-hide">
             {variants.map(variant => (
               <TabsTrigger
                 key={variant.name}

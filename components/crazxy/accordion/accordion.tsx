@@ -29,7 +29,7 @@ const Accordion = ({ children }: { children: ReactNode }) => {
 
   return (
     <AccordionContext.Provider value={{ openItem, toggleItem }}>
-      <div>{children}</div>
+      <div className="space-y-2">{children}</div>
     </AccordionContext.Provider>
   );
 };

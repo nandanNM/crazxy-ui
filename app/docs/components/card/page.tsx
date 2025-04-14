@@ -3,8 +3,107 @@ import InstallationCommands from "../installation-commands";
 import { Separator } from "@/components/ui/separator";
 import CodeSnippet from "../code-snippet";
 import { Card } from "@/components/crazxy/card/normal-card";
+import ComponentShowcase from "@/components/component-showcase";
 
 export default function CardPage() {
+  const variants = [
+    {
+      name: "default",
+      label: "Default",
+      component: (
+        <Card
+          title="Card Title"
+          variant="default"
+          description="Card Description"
+        />
+      ),
+      description: "This is the default variant of the card component.",
+    },
+    {
+      name: "dots",
+      label: "Dots",
+      component: (
+        <Card
+          title="Card Title"
+          variant="dots"
+          description="Card Description"
+        />
+      ),
+      description: "This is the dots variant of the card component.",
+    },
+    {
+      name: "gradient",
+      label: "Gradient",
+      component: (
+        <Card
+          title="Card Title"
+          variant="gradient"
+          description="Card Description"
+        />
+      ),
+      description: "This is the gradient variant of the card component.",
+    },
+    {
+      name: "plus",
+      label: "Plus",
+      component: (
+        <Card
+          title="Card Title"
+          variant="plus"
+          description="Card Description"
+        />
+      ),
+      description: "This is the plus variant of the card component.",
+    },
+    {
+      name: "neubrutalism",
+      label: "Neubrutalism",
+      component: (
+        <Card
+          title="Card Title"
+          variant="neubrutalism"
+          description="Card Description"
+        />
+      ),
+      description: "This is the neubrutalism variant of the card component.",
+    },
+    {
+      name: "corners",
+      label: "Corners",
+      component: (
+        <Card
+          title="Card Title"
+          variant="corners"
+          description="Card Description"
+        />
+      ),
+      description: "This is the corners variant of the card component.",
+    },
+    {
+      name: "inner",
+      label: "Inner",
+      component: (
+        <Card
+          title="Card Title"
+          variant="inner"
+          description="Card Description"
+        />
+      ),
+      description: "This is the inner variant of the card component.",
+    },
+    {
+      name: "lifted",
+      label: "Lifted",
+      component: (
+        <Card
+          title="Card Title"
+          variant="lifted"
+          description="Card Description"
+        />
+      ),
+      description: "This is the lifted variant of the card component.",
+    },
+  ];
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-2">
@@ -15,26 +114,13 @@ export default function CardPage() {
         />
       </div>
       <p className="text-muted-foreground">
-        Displays a button or a component that looks like a crazxy card.
+        Displays a card or a component that looks like a crazxy card.
       </p>
-      <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px]">
-        <div className="flex items-center justify-between">
-          <h2 className="text-sm text-muted-foreground sm:pl-3">
-            A simple card button component
-          </h2>
-          <div className="flex items-center gap-2">{/* for v0 */}</div>
-        </div>
-        <div className="flex items-center justify-center min-h-[400px] relative">
-          <div className="w-full flex items-center justify-center flex-col gap-8">
-            <Card
-              title="Card Title"
-              description="Card Description goes here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              variant="gradient"
-              className=""
-            />
-          </div>
-        </div>
-      </div>
+      <ComponentShowcase
+        variants={variants}
+        title="A simple crazxy card component"
+        defaultVariant="default"
+      />
       <h3 className="text-lg font-bold">Installation</h3>
       <Separator />
       <InstallationCommands

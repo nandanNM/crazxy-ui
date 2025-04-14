@@ -13,13 +13,6 @@ export default function ButtonPage() {
       component: <Button variant="primary">Click me</Button>,
       description: "This is the pri primary of the button component.",
     },
-
-    {
-      name: "icon",
-      label: "Icon",
-      component: <Button variant="icon">Click me</Button>,
-      description: "This is the icon variant of the button component.",
-    },
     {
       name: "accent",
       label: "Accent",
@@ -43,6 +36,12 @@ export default function ButtonPage() {
       label: "Minimal",
       component: <Button variant="minimal">Click me</Button>,
       description: "This is the minimal variant of the button component.",
+    },
+    {
+      name: "icon",
+      label: "Icon",
+      component: <Button variant="icon">Click me</Button>,
+      description: "This is the icon variant of the button component.",
     },
   ];
 
