@@ -20,7 +20,7 @@ export function SiteHeader() {
         </div>
 
         <nav className="hidden items-center gap-4 text-sm md:flex">
-          {navItems.header.map((item) => (
+          {navItems.header.map(item => (
             <Link
               href={item.href}
               key={item.href}
@@ -32,7 +32,7 @@ export function SiteHeader() {
         </nav>
         <div className="ml-auto flex items-center gap-2">
           <div className="p-1">
-            <GitHubStarButton />
+            <GitHubStarButton href="https://github.com/nandanNM/crazxy-ui" />
           </div>
           <ModeSwitcher />
         </div>
