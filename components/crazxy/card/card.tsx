@@ -1,49 +1,139 @@
-import type React from "react";
-import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+"use client";
 
-interface CardProps {
+import * as React from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+
+export interface ImageCardProps
+  extends React.ComponentPropsWithoutRef<typeof Card> {
   title: string;
   subtitle?: string;
   description?: string;
   imageUrl?: string;
-  className?: string;
+  imageAlt?: string;
+  imageHeight?: number;
+  children?: React.ReactNode;
 }
 
-const UICard: React.FC<CardProps> = ({
-  title,
-  subtitle,
-  description,
-  imageUrl,
-  className = "",
-}) => {
-  return (
-    <Card className={`overflow-hidden ${className}`}>
-      {imageUrl && (
-        <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72">
-          <Image
-            src={imageUrl || "/placeholder.svg"}
-            alt={title}
-            fill
-            className="object-cover rounded-t-lg"
-          />
-        </div>
-      )}
-      <CardHeader>
-        <CardTitle className="text-xl sm:text-2xl">{title}</CardTitle>
-        {subtitle && (
-          <p className="text-sm sm:text-base text-muted-foreground">
-            {subtitle}
-          </p>
-        )}
-      </CardHeader>
-      {description && (
-        <CardContent>
-          <p className="text-sm sm:text-base">{description}</p>
-        </CardContent>
-      )}
-    </Card>
-  );
-};
+const ImageCard = React.forwardRef<HTMLDivElement, ImageCardProps>(
+  (
+    {
+      title,
+      subtitle,
+      description,
+      imageUrl,
+      imageHeight = 250,
+      className,
+      children,
+      ...props
+    },
+    ref,
+  ) => {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative group cursor-pointer h-[350px] w-[300px]"
+        whileHover={{
+          filter: "drop-shadow(0 0 25px rgba(0, 0, 0, 0.15))",
+        }}
+      >
+        {/* Gradient background */}
+        <motion.div
+          className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-pink-400 to-rose-500 rounded-xl blur-xl opacity-20 group-hover:opacity-60 transition-all duration-700 ease-in-out shadow-md"
+          animate={{
+            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          style={{
+            backgroundSize: "200% 200%",
+          }}
+        />
 
-export default UICard;
+        <Card
+          ref={ref}
+          className={cn(
+            "overflow-hidden relative bg-background/90 backdrop-blur-md",
+            "transition-all duration-300",
+            "border border-border hover:border-purple-500/30",
+            imageUrl && "p-0 pb-4",
+            className,
+          )}
+          {...props}
+        >
+          {imageUrl && (
+            <motion.div
+              className="relative w-full overflow-hidden object-cover"
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.div
+                className="w-full rounded-t-xl bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${imageUrl})`,
+                  height: imageHeight,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  transition: {
+                    duration: 0.4,
+                    ease: "easeOut",
+                  },
+                }}
+              />
+            </motion.div>
+          )}
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <CardHeader>
+              <CardTitle className="text-xl sm:text-2xl">{title}</CardTitle>
+              {subtitle && (
+                <p className="text-sm sm:text-base text-muted-foreground tracking-wide leading-relaxed">
+                  {subtitle}
+                </p>
+              )}
+            </CardHeader>
+
+            {/* Description or Children */}
+            <CardContent>
+              {description && (
+                <motion.p
+                  className="text-sm sm:text-base mb-1"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
+                  {description}
+                </motion.p>
+              )}
+              {children && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                >
+                  {children}
+                </motion.div>
+              )}
+            </CardContent>
+          </motion.div>
+        </Card>
+      </motion.div>
+    );
+  },
+);
+
+ImageCard.displayName = "ImageCard";
+
+export { ImageCard };
