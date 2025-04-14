@@ -83,7 +83,7 @@ const AccordionTrigger = forwardRef<
     >
       {children}
       <svg
-        className="shrink-0 ml-8 h-4 w-4 transition-transform duration-200"
+        className="shrink-0 ml-8 h-4 w-4 cursor-pointer transition-transform duration-200"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
       >

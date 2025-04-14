@@ -62,7 +62,7 @@ export default function ButtonPage() {
       <ComponentShowcase
         variants={variants}
         title="A simple crazxy button component"
-        defaultVariant="accent"
+        defaultVariant="primary"
       />
 
       <h3 className="text-lg font-bold">Installation</h3>

@@ -24,7 +24,7 @@ export default function SidebarItem({ item }: SidebarItemProps) {
       <SidebarMenuButton asChild isActive={isActive}>
         <Link
           href={item.url}
-          className="relative inline-flex overflow-hidden rounded-xl border sm:flex dark:border-zinc-700/80"
+          className="relative inline-flex overflow-hidden rounded-xl  sm:flex "
           tabIndex={-1}
         >
           {item.title}

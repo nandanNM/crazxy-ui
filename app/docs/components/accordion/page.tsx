@@ -74,7 +74,7 @@ export default function AccordionPage() {
 
       <Separator />
 
-      <CodeSnippet>{`import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/crazxy/accordion"`}</CodeSnippet>
+      <CodeSnippet>{`import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/crazxy-ui/accordion"`}</CodeSnippet>
 
       <CodeSnippet>{`<Accordion>
   <AccordionItem value="example">
