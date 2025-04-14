@@ -2,11 +2,15 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { Metadata } from "next";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
+export const metadata: Metadata = {
+  title: "Components | CrazxyUI ",
+};
 export default function Layout({ children }: LayoutProps) {
   return (
     <main className="relative flex gap-4 p-4">
