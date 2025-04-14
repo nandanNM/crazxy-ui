@@ -11,7 +11,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/crazxy/button.tsx",
+          "path": "components/crazxy/button/button.tsx",
           "type": "registry:component",
           "target": "components/ui/crazxy/button.tsx"
         }
