@@ -12,7 +12,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-full w-full max-w-[1400px] items-center gap-1 border-r border-l border-dashed px-4 md:gap-5 md:px-6">
         <Link href="/" className="hidden items-center gap-2 md:flex">
           {/* image */}
-          <h2 className={`hidden font-bold md:inline-block`}>CrazxyUI</h2>
+          <h2 className={`hidden font-bold md:inline-block`}>Crazxy UI</h2>
         </Link>
 
         <div className="block md:hidden">

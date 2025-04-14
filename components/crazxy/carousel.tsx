@@ -1,108 +1,83 @@
 "use client";
 
-import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import React, { useRef, useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const carouselVariants = cva("relative mx-auto max-w-2xl overflow-hidden", {
-  variants: {
-    variant: {
-      default: "",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-  },
-});
+type SimpleCarouselProps = {
+  images: string[];
+  className?: string;
+};
 
-export interface CarouselProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof carouselVariants> {
-  asChild?: boolean;
-}
+const CraxyCarousel: React.FC<SimpleCarouselProps> = ({
+  images,
+  className = "",
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
-  ({ className, variant, children, ...props }, ref) => {
-    const childrenArray = React.Children.toArray(children);
-    const total = childrenArray.length;
-    const [current, setCurrent] = React.useState(0);
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: currentIndex * containerRef.current.clientWidth,
+        behavior: "smooth",
+      });
+    }
+  }, [currentIndex]);
 
-    const goToPrev = () => {
-      const prevIndex = current === 0 ? total - 1 : current - 1;
-      setCurrent(prevIndex);
-    };
+  const nextSlide = () => {
+    setCurrentIndex(prev => (prev + 1) % images.length);
+  };
 
-    const goToNext = () => {
-      const nextIndex = current === total - 1 ? 0 : current + 1;
-      setCurrent(nextIndex);
-    };
+  const prevSlide = () => {
+    setCurrentIndex(prev => (prev - 1 + images.length) % images.length);
+  };
 
-    const goToSlide = (index: number) => {
-      setCurrent(index);
-    };
-
-    return (
+  return (
+    <div className={`relative w-full overflow-hidden ${className}`}>
       <div
-        ref={ref}
-        className={cn(carouselVariants({ variant }), className)}
-        {...props}
+        ref={containerRef}
+        className="flex transition-transform duration-500 ease-in-out"
       >
-        <div className="relative w-full h-[300px] overflow-hidden">
-          <div className="w-full h-full relative">
-            {childrenArray.map((child, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out",
-                  index === current
-                    ? "opacity-100 z-10"
-                    : "opacity-0 z-0 pointer-events-none",
-                )}
-              >
-                {child}
-              </div>
-            ))}
-          </div>
-
-          {/* Navigation buttons */}
-          <button
-            onClick={goToPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/60 z-20"
-            aria-label="Previous slide"
-          >
-            ◀
-          </button>
-
-          <button
-            onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/60 z-20"
-            aria-label="Next slide"
-          >
-            ▶
-          </button>
-
-          {/* Indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
-            {childrenArray.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={cn(
-                  "w-2 h-2 rounded-full transition-colors",
-                  current === index
-                    ? "bg-white"
-                    : "bg-white/50 hover:bg-white/75",
-                )}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
+        {images.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`Slide ${index + 1}`}
+            className="w-full flex-shrink-0 object-cover rounded-lg shadow-lg"
+          />
+        ))}
       </div>
-    );
-  },
-);
 
-Carousel.displayName = "Carousel";
+      {/* Left Button */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-4 shadow-lg hover:bg-gray-100 focus:outline-none transition-all duration-300"
+      >
+        <ChevronLeft size={28} /> {/* Lucide Chevron Left Icon */}
+      </button>
 
-export { Carousel, carouselVariants };
+      {/* Right Button */}
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-4 shadow-lg hover:bg-gray-100 focus:outline-none transition-all duration-300"
+      >
+        <ChevronRight size={28} /> {/* Lucide Chevron Right Icon */}
+      </button>
+
+      {/* Optional: Add Indicators */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              currentIndex === index ? "bg-white scale-125" : "bg-gray-400"
+            }`}
+          ></button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CraxyCarousel;
