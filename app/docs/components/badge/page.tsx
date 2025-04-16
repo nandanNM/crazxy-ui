@@ -81,7 +81,7 @@ export default function BadgePage() {
 
       <h3 className="text-lg font-bold mt-10">Usage</h3>
       <Separator />
-      <CodeSnippet>{`import { Badge } from "@/components/crazxy/badge";`}</CodeSnippet>
+      <CodeSnippet>{`import { Badge } from "@/components/crazxy-ui/badge";`}</CodeSnippet>
       <CodeSnippet>{`<Badge variant="default">Default Badge</Badge>`}</CodeSnippet>
       <CodeSnippet>{`<Badge variant="secondary">Secondary Badge</Badge>`}</CodeSnippet>
       <CodeSnippet>{`<Badge variant="purple" size="lg">Large Purple Badge</Badge>`}</CodeSnippet>

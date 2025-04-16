@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 export interface DestinationCardProps
   extends React.HTMLAttributes<HTMLDivElement> {
   destination: {
-    id: number | string;
     name: string;
     country: string;
     rating: number;

@@ -78,7 +78,7 @@ export default function ButtonPage() {
       <h3 className="text-lg font-bold mt-10">Usage</h3>
       <Separator />
       <CodeSnippet>{`import { Button } from "@/components/ui/crazxy-ui/button"`}</CodeSnippet>
-      <CodeSnippet>{` <Button aurora={true}>Click me</Button>`}</CodeSnippet>
+      <CodeSnippet>{` <Button>Click me</Button>`}</CodeSnippet>
     </div>
   );
 }

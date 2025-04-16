@@ -135,15 +135,24 @@ export default function CardPage() {
       <h3 className="text-lg font-bold">Installation</h3>
       <Separator />
       <InstallationCommands
-        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-button.json`}
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-card.json`}
       />
       <h3 className="text-lg font-bold mt-10">Usage</h3>
       <Separator />
       <CodeSnippet>{`import { Card } from "@/components/ui/crazxy-ui/card"`}</CodeSnippet>
       <CodeSnippet>{` <Card title="" description="" variant="" className=""/>`}</CodeSnippet>
-
+      <Separator />
       {/* Section: Image Card */}
-      <h2 className="text-2xl font-bold mt-10">Image Card</h2>
+      <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+        <h1 className="text-3xl font-bold">Image Card</h1>
+        <CopyCommandButton
+          copyCommand={`pnpm dlx shadcn@latest add ${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-image-card.json`}
+          command={"pnpm dlx shadcn@latest add crazxy-image-card"}
+        />
+      </div>
+      <p className="text-muted-foreground">
+        Displays a card or a component that looks like a crazxy image card.
+      </p>
       <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px]">
         <div className="flex items-center justify-between">
           <h2 className="text-sm text-muted-foreground sm:pl-3">
@@ -156,28 +165,38 @@ export default function CardPage() {
           <div className="w-full flex items-center justify-center flex-col gap-8">
             {/* component */}
             <ImageCard
-              image="/placeholder.svg"
+              image="https://plus.unsplash.com/premium_photo-1726118797535-b62b658ed887?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
               subtitle="Tax Management"
               title="What is Web 3?"
               buttonText="Learn More"
+              className="h-78"
             />
           </div>
         </div>
       </div>
-
+      <h3 className="text-lg font-bold">Installation</h3>
+      <Separator />
+      <InstallationCommands
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-image-card.json`}
+      />
       <h3 className="text-lg font-bold mt-6">Usage</h3>
       <Separator />
-      <CodeSnippet>{`import { ImageCard } from "@/components/crazxy-ui/card"`}</CodeSnippet>
+      <CodeSnippet>{`import { ImageCard } from "@/components/ui/crazxy-ui/image-card"`}</CodeSnippet>
       <CodeSnippet>{` <ImageCard title="Image Card Title" description="This is an image card description." imageUrl="https://via.placeholder.com/300" />`}</CodeSnippet>
-
+      <Separator />
       {/* Section: Flip Card */}
-      <h2 className="text-2xl font-bold mt-10">Flip Card</h2>
+      <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+        <h1 className="text-3xl font-bold">Flip Card</h1>
+        <CopyCommandButton
+          copyCommand={`pnpm dlx shadcn@latest add ${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-flip-card.json`}
+          command={"pnpm dlx shadcn@latest add crazxy-flip-card"}
+        />
+      </div>
+      <p className="text-muted-foreground">
+        Displays a card or a component that looks like a crazxy flip card.
+      </p>
       <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px]">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm text-muted-foreground sm:pl-3">
-            A simple crazxy image card component
-          </h2>
-
           <div className="flex items-center gap-2">{/* for v0 */}</div>
         </div>
         <div className="flex items-center justify-center min-h-[400px] relative">
@@ -218,10 +237,13 @@ export default function CardPage() {
           </div>
         </div>
       </div>
-
+      <Separator />
+      <InstallationCommands
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-flip-card.json`}
+      />
       <h3 className="text-lg font-bold mt-6">Usage</h3>
       <Separator />
-      <CodeSnippet>{`import { FlipCard, FlipCardFront, FlipCardBack, FlipCardImage } from "@/components/crazxy/card/flip-card"`}</CodeSnippet>
+      <CodeSnippet>{`import { FlipCard, FlipCardFront, FlipCardBack, FlipCardImage } from "@/components/ui/crazxy-ui/flip-card"`}</CodeSnippet>
       <CodeSnippet>{` <FlipCard size="default" className="cursor-pointer">
   <FlipCardFront>
     <FlipCardImage

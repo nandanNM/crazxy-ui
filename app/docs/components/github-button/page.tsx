@@ -49,7 +49,7 @@ export default function GitHubButtonPage() {
       <Separator />
 
       <CodeSnippet>
-        {`import { GitHubStarButton } from "@/components/crazxy/button/gitHubStar-button";`}
+        {`import { GitHubStarButton } from "@/components/ui/crazxy-ui/gitHub-button";`}
       </CodeSnippet>
       <CodeSnippet>{`
 <GitHubStarButton

@@ -80,7 +80,7 @@ export default function AlertPage() {
 
       <h3 className="text-lg font-bold mt-10">Usage</h3>
       <Separator />
-      <CodeSnippet>{`import { Alert } from "@/components/crazxy/alert";`}</CodeSnippet>
+      <CodeSnippet>{`import { Alert } from "@/components/crazxy-ui/alert";`}</CodeSnippet>
       <CodeSnippet>{`<Alert variant="success">This is a success alert!</Alert>`}</CodeSnippet>
       <CodeSnippet>{`<Alert variant="error" showClose onClose={() => alert("Closed!")}>
   This is an error alert with a close button!

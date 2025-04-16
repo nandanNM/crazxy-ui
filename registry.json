@@ -13,7 +13,161 @@
         {
           "path": "components/crazxy/button/button.tsx",
           "type": "registry:component",
-          "target": "components/ui/crazxy/button.tsx"
+          "target": "components/ui/crazxy-ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-accordion",
+      "type": "registry:component",
+      "title": "Crazxy Accordion",
+      "description": "A simple crazxy accordion component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/accordion/accordion.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/accordion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-accordion",
+      "type": "registry:component",
+      "title": "Crazxy Accordion",
+      "description": "A simple crazxy accordion component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/accordion/accordion.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/accordion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-alert",
+      "type": "registry:component",
+      "title": "Crazxy Alert",
+      "description": "A simple crazxy alert component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/alert.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/alert.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-avatar",
+      "type": "registry:component",
+      "title": "Crazxy Avtar",
+      "description": "A simple crazxy avtar component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/avtar.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/avtar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-badge",
+      "type": "registry:component",
+      "title": "Crazxy Badge",
+      "description": "A simple crazxy badge component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/badge.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-card",
+      "type": "registry:component",
+      "title": "Crazxy Card",
+      "description": "A simple crazxy card component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/card/normal-card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-image-card",
+      "type": "registry:component",
+      "title": "Crazxy Avtar",
+      "description": "A simple crazxy image card component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/card/image-card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/image-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-flip-card",
+      "type": "registry:component",
+      "title": "Crazxy Flip card",
+      "description": "A simple crazxy flip card component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/card/flip-card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/flip-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-carousel",
+      "type": "registry:component",
+      "title": "Crazxy Carousel",
+      "description": "A simple crazxy carousel component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/carousel.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/carousel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-destination-card",
+      "type": "registry:component",
+      "title": "Crazxy Destination Card",
+      "description": "A simple crazxy destination card component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/card/destination-card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/destination-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-gitHub-button",
+      "type": "registry:component",
+      "title": "Crazxy GitHub Button ",
+      "description": "A simple crazxy gitHub button component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/card/gitHub-button.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/gitHub-button.tsx"
         }
       ]
     }
