@@ -31,7 +31,7 @@ function Hero() {
           <div>
             <Link href="/docs" className="flex items-center gap-4">
               <Button variant="secondary" size="sm" className="gap-4">
-                Instaletion...
+                Installation guide
                 <MoveRight className="w-4 h-4" />
               </Button>
             </Link>
