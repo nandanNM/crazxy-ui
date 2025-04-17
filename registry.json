@@ -170,6 +170,90 @@
           "target": "components/ui/crazxy-ui/gitHub-button.tsx"
         }
       ]
+    },
+    {
+      "name": "crazxy-input",
+      "type": "registry:component",
+      "title": "Crazxy Input ",
+      "description": "A simple crazxy input component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/input/input.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-password-input",
+      "type": "registry:component",
+      "title": "Crazxy Password Input ",
+      "description": "A simple crazxy password input component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/input/password-input.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/password-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-loader",
+      "type": "registry:component",
+      "title": "Crazxy Loader ",
+      "description": "A simple crazxy loader component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/loader.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/loader.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-modal",
+      "type": "registry:component",
+      "title": "Crazxy Modal ",
+      "description": "A simple crazxy modal component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/modal/modal.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/modal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-footer",
+      "type": "registry:component",
+      "title": "Crazxy Footer ",
+      "description": "A simple crazxy footer component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/footer/footer.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/footer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "crazxy-hero",
+      "type": "registry:component",
+      "title": "Crazxy Hero ",
+      "description": "A simple crazxy hero component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/crazxy/hero/hero.tsx",
+          "type": "registry:component",
+          "target": "components/ui/crazxy-ui/hero.tsx"
+        }
+      ]
     }
   ]
 }

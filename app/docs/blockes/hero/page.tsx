@@ -12,7 +12,7 @@ export default function FooterPage() {
         <h1 className="text-3xl font-bold">Hero</h1>
         <CopyCommandButton
           copyCommand={`pnpm dlx shadcn@latest add ${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-hero.json`}
-          command={"pnpm dlx shadcn@latest add footer"}
+          command={"pnpm dlx shadcn@latest add hero"}
         />
       </div>
       <p className="text-muted-foreground">
@@ -47,7 +47,7 @@ export default function FooterPage() {
       <Separator />
 
       <CodeSnippet>
-        {`import { Hero } from "@/components/crazxy-ui/hero";`}
+        {`import { Hero } from "@/components/ui/crazxy-ui/hero";`}
       </CodeSnippet>
       <p className="text-muted-foreground">
         If you are not add your button component you use your button it is also

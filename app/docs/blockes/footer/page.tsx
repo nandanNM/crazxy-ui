@@ -4,7 +4,7 @@ import InstallationCommands from "../../components/installation-commands";
 import { Footer } from "@/components/crazxy/footer/footer";
 import CopyCommandButton from "../../components/copy-command-button";
 import CodeSnippet from "../../components/code-snippet";
-import { OpenInV0Button } from "../../components/open-in-v0-button";
+// import { OpenInV0Button } from "../../components/open-in-v0-button";
 
 export default function FooterPage() {
   return (
@@ -27,7 +27,7 @@ export default function FooterPage() {
             A simple crazxy footer component
           </h2>
           <div className="flex items-center gap-2">
-            <OpenInV0Button name="crazxy-footer" />
+            {/* <OpenInV0Button name="crazxy-footer" /> */}
           </div>
         </div>
         <div className="flex items-center justify-center min-h-[400px] relative">
@@ -41,14 +41,14 @@ export default function FooterPage() {
       <h3 className="text-lg font-bold">Installation</h3>
       <Separator />
       <InstallationCommands
-        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-github-button.json`}
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/crazxy-footer.json`}
       />
 
       <h3 className="text-lg font-bold mt-10">Usage</h3>
       <Separator />
 
       <CodeSnippet>
-        {`import { Footer } from "@/components/crazxy-ui/footer";`}
+        {`import { Footer } from "@/components/ui/crazxy-ui/footer";`}
       </CodeSnippet>
       <CodeSnippet>{`<Footer/>`}</CodeSnippet>
     </div>

@@ -76,7 +76,7 @@ export default function LoaderPage() {
       />
       <h3 className="text-lg font-bold mt-10">Usages</h3>
       <Separator />
-      <CodeSnippet>{`import { Loader } from "@@/components/ui/crazxy-ui/loader";`}</CodeSnippet>
+      <CodeSnippet>{`import { Loader } from "@/components/ui/crazxy-ui/loader";`}</CodeSnippet>
       <CodeSnippet>{`<Loader variant="default" size="md" />`}</CodeSnippet>
       <CodeSnippet>{`<Loader variant="default" size="lg" nested nestedVariant="secondary" />`}</CodeSnippet>
       <CodeSnippet>{`<Loader variant="default" size="lg" color="#060270" nested nestedColor="#CC6CE7" />`}</CodeSnippet>
