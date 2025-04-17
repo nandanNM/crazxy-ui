@@ -33,7 +33,7 @@ export default function CarouselPage() {
               images={[
                 "/carousel/image1.jpg",
                 "/carousel/image2.jpg",
-                "/carousel/image3.jpg",
+                "/carousel/image1.jpg",
               ]}
             />
           </div>
