@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "crazxy-badge",
+  "type": "registry:component",
+  "title": "Crazxy Badge",
+  "description": "A simple crazxy badge component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/crazxy/badge.tsx",
+      "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport { cva, type VariantProps } from \"class-variance-authority\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nconst badgeVariants = cva(\r\n  \"rounded-lg px-2 inline-flex items-center py-0.5 text-[9px] tracking-wide w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden font-medium bg-linear-to-r shadow-[0_0_10px_-3px_rgba(16,185,129,0.15)] dark:shadow-[0_0_10px_-3px_rgba(16,185,129,0.2)]\",\r\n  {\r\n    variants: {\r\n      variant: {\r\n        default:\r\n          \"from-emerald-400/5 via-emerald-500/5 to-teal-500/5 text-emerald-600 dark:text-emerald-400 ring-1 ring-emerald-500/20 dark:ring-emerald-400/20\",\r\n        secondary:\r\n          \"text-transparent ring-1 ring-orange-500/20 dark:ring-orange-400/20 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text font-semibold \",\r\n        destructive:\r\n          \"from-purple-400/5 via-purple-500/5 to-purple-500/5 text-purple-600 dark:text-purple-400 ring-1 ring-purple-500/20 dark:ring-purple-400/20\",\r\n        outline:\r\n          \"from-emerald-400/5 via-emerald-500/5 to-teal-500/5 ring-1 ring-emerald-500/20 dark:ring-emerald-400/20 text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground\",\r\n        ghost:\r\n          \"border-transparent bg-transparent text-foreground hover:bg-muted/20\",\r\n        purple:\r\n          \"border-transparent bg-purple-500 text-white hover:bg-purple-600\",\r\n        orange:\r\n          \"border-transparent bg-orange-500 text-white hover:bg-orange-600\",\r\n      },\r\n      size: {\r\n        sm: \"px-2 py-0.25 text-xs\",\r\n        md: \"px-2.5 py-0.5 text-xs\",\r\n        lg: \"px-3 py-1 text-sm\",\r\n      },\r\n    },\r\n    defaultVariants: {\r\n      variant: \"default\",\r\n      size: \"md\",\r\n    },\r\n  },\r\n);\r\n\r\nexport interface BadgeProps\r\n  extends React.HTMLAttributes<HTMLDivElement>,\r\n    VariantProps<typeof badgeVariants> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Badge({\r\n  className,\r\n  variant,\r\n  size,\r\n  asChild = false,\r\n  ...props\r\n}: BadgeProps) {\r\n  const Comp = asChild ? React.Fragment : \"span\";\r\n  return (\r\n    <Comp\r\n      className={cn(badgeVariants({ variant, size }), className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport { Badge, badgeVariants };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/crazxy-ui/badge.tsx"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "crazxy-hero",
+  "type": "registry:component",
+  "title": "Crazxy Hero ",
+  "description": "A simple crazxy hero component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/crazxy/hero/hero.tsx",
+      "content": "import React from \"react\";\r\nimport { Button } from \"@/components/crazxy/button/button\";\r\n\r\nconst Hero = () => {\r\n  return (\r\n    <div className=\" bg-base-200 min-h-screen flex justify-center items-center bg-gradient-to-r from-violet-600 to-indigo-600\">\r\n      <div className=\" text-center text-gray-200\">\r\n        <div className=\"w-2xl lg:w-5xl\">\r\n          <h1 className=\"text-6xl font-bold drop-shadow-lg\">Hello there</h1>\r\n          <p className=\"py-6 text-2xl lg:text-4xl\">\r\n            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda\r\n            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et\r\n            a id nisi.\r\n          </p>\r\n          <Button>Get Started</Button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Hero;\r\n",
+      "type": "registry:component",
+      "target": "components/ui/crazxy-ui/hero.tsx"
+    }
+  ]
+}

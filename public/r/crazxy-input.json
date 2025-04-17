@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "crazxy-input",
+  "type": "registry:component",
+  "title": "Crazxy Input ",
+  "description": "A simple crazxy input component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/crazxy/input/input.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\r\nimport * as React from \"react\";\r\n\r\nconst Input = React.forwardRef<HTMLInputElement, React.ComponentProps<\"input\">>(\r\n  ({ className, type, ...props }, ref) => {\r\n    return (\r\n      <input\r\n        type={type}\r\n        className={cn(\r\n          \"flex h-9  rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground shadow-sm shadow-black/5 transition-shadow placeholder:text-muted-foreground/70 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50\",\r\n          type === \"search\" &&\r\n            \"[&::-webkit-search-cancel-button]:appearance-none [&::-webkit-search-decoration]:appearance-none [&::-webkit-search-results-button]:appearance-none [&::-webkit-search-results-decoration]:appearance-none\",\r\n          type === \"file\" &&\r\n            \"p-0 pr-3 italic text-muted-foreground/70 file:me-3 file:h-full file:border-0 file:border-r file:border-solid file:border-input file:bg-transparent file:px-3 file:text-sm file:font-medium file:not-italic file:text-foreground\",\r\n          className,\r\n        )}\r\n        ref={ref}\r\n        {...props}\r\n      />\r\n    );\r\n  },\r\n);\r\nInput.displayName = \"Input\";\r\n\r\nexport { Input };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/crazxy-ui/input.tsx"
+    }
+  ]
+}

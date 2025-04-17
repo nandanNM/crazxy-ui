@@ -67,7 +67,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/crazxy/avtar.tsx",
+          "path": "components/crazxy/avatar.tsx",
           "type": "registry:component",
           "target": "components/ui/crazxy-ui/avtar.tsx"
         }
@@ -165,7 +165,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/crazxy/card/gitHub-button.tsx",
+          "path": "components/crazxy/button/gitHubStar-button.tsx",
           "type": "registry:component",
           "target": "components/ui/crazxy-ui/gitHub-button.tsx"
         }

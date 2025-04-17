@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "crazxy-avatar",
+  "type": "registry:component",
+  "title": "Crazxy Avtar",
+  "description": "A simple crazxy avtar component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/crazxy/avatar.tsx",
+      "content": "import * as React from \"react\";\r\nimport { cva, type VariantProps } from \"class-variance-authority\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nconst avatarVariants = cva(\r\n  \"inline-block bg-gray-100 dark:bg-gray-800 object-cover border-2 border-gray-200 dark:border-gray-700 shadow-md transition-all\",\r\n  {\r\n    variants: {\r\n      size: {\r\n        sm: \"h-8 w-8\",\r\n        md: \"h-12 w-12\",\r\n        lg: \"h-20 w-20\",\r\n        xl: \"h-32 w-32\",\r\n      },\r\n      shape: {\r\n        rounded: \"rounded-full\",\r\n        squared: \"rounded-md\",\r\n      },\r\n      hoverEffect: {\r\n        true: \"hover:-translate-y-1 transform\",\r\n        false: \"\",\r\n      },\r\n    },\r\n    defaultVariants: {\r\n      size: \"md\",\r\n      shape: \"rounded\",\r\n      hoverEffect: false,\r\n    },\r\n  },\r\n);\r\n\r\nexport interface AvatarProps\r\n  extends React.ImgHTMLAttributes<HTMLImageElement>,\r\n    VariantProps<typeof avatarVariants> {\r\n  statusColor?: string; // like \"bg-green-400\"\r\n  showStatus?: boolean;\r\n}\r\n\r\nconst Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(\r\n  (\r\n    { className, size, shape, hoverEffect, statusColor, showStatus, ...props },\r\n    ref,\r\n  ) => {\r\n    return (\r\n      <div className=\"relative inline-block\">\r\n        <img\r\n          ref={ref}\r\n          className={cn(\r\n            \"rounded-full object-cover\",\r\n            avatarVariants({ size, shape, hoverEffect }),\r\n            className,\r\n          )}\r\n          {...props}\r\n        />\r\n        {showStatus && (\r\n          <span\r\n            className={cn(\r\n              \"absolute border-2 border-white dark:border-gray-800 rounded-full\",\r\n              size === \"sm\" && \"w-2.5 h-2.5 bottom-0 right-0\",\r\n              size === \"md\" && \"w-3.5 h-3.5 bottom-0 right-0\",\r\n              size === \"lg\" && \"w-4.5 h-4.5 bottom-1 right-1\",\r\n              size === \"xl\" && \"w-6 h-6 bottom-1.5 right-1.5\",\r\n              statusColor ?? \"bg-green-400\",\r\n            )}\r\n          />\r\n        )}\r\n      </div>\r\n    );\r\n  },\r\n);\r\n\r\nAvatar.displayName = \"Avatar\";\r\n\r\nexport { Avatar, avatarVariants };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/crazxy-ui/avtar.tsx"
+    }
+  ]
+}

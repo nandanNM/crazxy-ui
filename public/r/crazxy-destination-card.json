@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "crazxy-destination-card",
+  "type": "registry:component",
+  "title": "Crazxy Destination Card",
+  "description": "A simple crazxy destination card component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/crazxy/card/destination-card.tsx",
+      "content": "import * as React from \"react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport interface DestinationCardProps\r\n  extends React.HTMLAttributes<HTMLDivElement> {\r\n  destination: {\r\n    name: string;\r\n    country: string;\r\n    rating: number;\r\n    src: string;\r\n    alt?: string;\r\n  };\r\n}\r\n\r\nconst DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(\r\n  ({ destination, className, ...props }, ref) => {\r\n    return (\r\n      <div\r\n        data-slot=\"card\"\r\n        ref={ref}\r\n        className={cn(\r\n          \"w-[300px] overflow-hidden h-86 bg-card text-card-foreground flex flex-col  rounded-xl border  shadow-sm\",\r\n          className,\r\n        )}\r\n        {...props}\r\n      >\r\n        <div\r\n          data-slot=\"card-background\"\r\n          className=\"h-full w-full  bg-center bg-cover relative\"\r\n          style={{ backgroundImage: `url(${destination.src})` }}\r\n        >\r\n          <div\r\n            data-slot=\"card-footer\"\r\n            className=\"absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6\"\r\n          >\r\n            <h3 className=\"text-2xl font-bold text-white\">\r\n              {destination.name}\r\n            </h3>\r\n            <p className=\"text-white mb-2\">{destination.country}</p>\r\n            <div className=\"flex items-center\">\r\n              <span className=\"text-yellow-400\">★</span>\r\n              <span className=\"text-white ml-1\">{destination.rating}</span>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    );\r\n  },\r\n);\r\nDestinationCard.displayName = \"DestinationCard\";\r\n\r\nexport { DestinationCard };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/crazxy-ui/destination-card.tsx"
+    }
+  ]
+}
