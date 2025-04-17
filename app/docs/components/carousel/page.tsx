@@ -31,9 +31,9 @@ export default function CarouselPage() {
             <CraxyCarousel
               className="max-w-[400px]"
               images={[
-                "/carousell/image1.jpg",
-                "/carousell/image2.jpg",
-                "/carousell/image3.jpg",
+                "/carousel/image1.jpg",
+                "/carousel/image2.jpg",
+                "/carousel/image3.jpg",
               ]}
             />
           </div>
@@ -60,9 +60,9 @@ export default function CarouselPage() {
       <CodeSnippet>{` <CraxyCarousel
               className="max-w-[400px]"
               images={[
-                "/carousell/image1.jpg",
-                "/carousell/image2.jpg",
-                "/carousell/image3.jpg",
+                "/carousel/image1.jpg",
+                "/carousel/image2.jpg",
+                "/carousel/image3.jpg",
                 ]}
             />`}</CodeSnippet>
 

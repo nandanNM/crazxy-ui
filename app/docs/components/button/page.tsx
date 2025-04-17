@@ -4,7 +4,6 @@ import { Separator } from "@/components/ui/separator";
 import CodeSnippet from "../code-snippet";
 import { Button } from "@/components/crazxy/button/button";
 import ComponentShowcase from "@/components/component-showcase";
-import { OpenInV0Button } from "../open-in-v0-button";
 
 export default function ButtonPage() {
   const variants = [
@@ -61,7 +60,7 @@ export default function ButtonPage() {
       </p>
       {/* v0 Btton */}
       <div className="justify-end flex ">
-        <OpenInV0Button name="crazxy-button" />
+        {/* <OpenInV0Button name="crazxy-button" /> */}
       </div>
 
       <ComponentShowcase

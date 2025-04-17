@@ -72,10 +72,12 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-row gap-3">
-            <AuroraButton aurora className="gap-2">
-              <span className="">Get started</span>
-              <MoveRight className="w-4 h-4" />
-            </AuroraButton>
+            <Link href="/docs/components/button">
+              <AuroraButton aurora className="gap-2">
+                <span className="">Get started</span>
+                <MoveRight className="w-4 h-4" />
+              </AuroraButton>
+            </Link>
           </div>
         </div>
       </div>
