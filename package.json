@@ -7,8 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "next lint",
-    "registry:build": "shadcn build",
-    "prepare": "husky"
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.4",
