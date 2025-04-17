@@ -30,11 +30,7 @@ export default function CarouselPage() {
           <div className="w-full flex items-center justify-center flex-col gap-8">
             <CraxyCarousel
               className="max-w-[400px]"
-              images={[
-                "/carousel/image1.jpg",
-                "/carousel/image2.jpg",
-                "/carousel/image3.jpg",
-              ]}
+              images={["/carousel/image1.jpg", "/placeholder.svg"]}
             />
           </div>
         </div>
