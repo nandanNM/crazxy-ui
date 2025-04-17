@@ -36,35 +36,32 @@ const CraxyCarousel: React.FC<SimpleCarouselProps> = ({
     <div className={`relative w-full overflow-hidden ${className}`}>
       <div
         ref={containerRef}
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex overflow-x-auto scroll-smooth scroll-snap-x mandatory scrollbar-hide"
       >
         {images.map((src, index) => (
           <img
             key={index}
             src={src}
             alt={`Slide ${index + 1}`}
-            className="w-full flex-shrink-0 object-cover rounded-lg shadow-lg"
+            className="min-w-full flex-shrink-0 object-cover rounded-lg shadow-lg scroll-snap-start"
           />
         ))}
       </div>
 
-      {/* Left Button */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-4 shadow-lg hover:bg-gray-100 focus:outline-none transition-all duration-300"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-100 focus:outline-none opacity-50 transition-all duration-300 cursor-pointer"
       >
-        <ChevronLeft size={28} /> {/* Lucide Chevron Left Icon */}
+        <ChevronLeft size={20} />
       </button>
 
-      {/* Right Button */}
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-4 shadow-lg hover:bg-gray-100 focus:outline-none transition-all duration-300"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-100 focus:outline-none opacity-50 transition-all duration-300 cursor-pointer"
       >
-        <ChevronRight size={28} /> {/* Lucide Chevron Right Icon */}
+        <ChevronRight size={20} />
       </button>
 
-      {/* Optional: Add Indicators */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <button
