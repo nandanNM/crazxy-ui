@@ -30,11 +30,7 @@ export default function GitHubButtonPage() {
         <div className="flex items-center justify-center min-h-[400px] relative">
           <div className="w-full flex items-center justify-center flex-col gap-8">
             {/* component */}
-            <GitHubStarButton
-              starCount={268}
-              text="Star on GitHub"
-              href="https://github.com/nandanNM/crazxy-ui"
-            />
+            <GitHubStarButton starCount={268} text="Star on GitHub" href="#" />
           </div>
         </div>
       </div>

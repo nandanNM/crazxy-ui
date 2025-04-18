@@ -34,7 +34,7 @@ export function SiteHeader() {
         </nav>
         <div className="ml-auto flex items-center gap-2">
           <div className="p-1">
-            <GitHubStarButton href="https://github.com/nandanNM/crazxy-ui" />
+            <GitHubStarButton href="#" />
           </div>
           <ModeSwitcher />
         </div>

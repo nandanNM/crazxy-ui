@@ -11,11 +11,7 @@ export default function SiteFooter() {
             CrazxyUI Team
           </Link>
           . The source code is available on{" "}
-          <Link
-            href="https://github.com/nandanNM/crazxy-ui"
-            className="underline"
-            target="_blank"
-          >
+          <Link href="#" className="underline" target="_blank">
             GitHub
           </Link>
           .
