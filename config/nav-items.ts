@@ -9,8 +9,8 @@ export const navItems = {
       href: "/docs/components/button",
     },
     {
-      label: "Blockes",
-      href: "/docs/blockes/footer",
+      label: "Blocks",
+      href: "/docs/blocks/footer",
     },
   ],
   navMain: [
@@ -41,11 +41,11 @@ export const navItems = {
       ],
     },
     {
-      title: "Blockes",
-      url: "blockes/footer",
+      title: "Blocks",
+      url: "blocks/footer",
       items: [
-        { title: "Footer", url: "/docs/blockes/footer", new: true },
-        { title: "Hero", url: "/docs/blockes/hero", new: true },
+        { title: "Footer", url: "/docs/blocks/footer", new: true },
+        { title: "Hero", url: "/docs/blocks/hero", new: true },
       ],
     },
   ],
