@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Build your retro library - CrazxyUI ",
+  title: "CrazxyUI ",
   description:
     "A collection of CrazxyUI styled components for your next project.",
 };
@@ -39,12 +39,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.className} ${fontHeading.className} antialiased flex flex-col min-h-screen`}>
+        className={`${fontSans.className} ${fontHeading.className} antialiased flex flex-col min-h-screen`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
-          disableTransitionOnChange>
+          disableTransitionOnChange
+        >
           <SiteHeader />
           <div className="flex-1 border-l border-r border-dashed max-w-[1400px] mx-auto w-full">
             {children}
